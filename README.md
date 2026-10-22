@@ -11,7 +11,7 @@ AccessNest helps small website owners spot common barriers and understand a prac
 3. **Useful fixes (complete):** tailored illustrative HTML patterns with plain-language guidance and a copy action.
 4. **Repeatable workflow (complete):** up to ten browser-local scans, same-page comparisons, a copyable summary, and JSON export.
 5. **Quality and safety (complete):** bounded request bodies, safe public-address fetching, response limits, security headers, keyboard skip link, and privacy notes.
-6. **Launch (deployed):** live at [accessnestai.vercel.app](https://accessnestai.vercel.app). GitHub source connection remains pending a dedicated AccessNest repository.
+6. **Launch (deployed):** live at [accessnestai.vercel.app](https://accessnestai.vercel.app). Source is on [GitHub](https://github.com/DevHannan-Official/AccessNest), branch `main`. The existing Vercel project still needs its Git connection enabled in Vercel settings.
 
 ## Run locally
 
@@ -36,20 +36,16 @@ pnpm start
 
 ### GitHub import (recommended)
 
-1. Create an empty GitHub repository (private is a sensible default), then from this folder run the commands below. Replace the URL with the repository URL GitHub gives you:
+The source is already pushed to [`DevHannan-Official/AccessNest`](https://github.com/DevHannan-Official/AccessNest) on `main`. To enable automatic deployments, open the existing AccessNest project in Vercel, go to **Settings → Git**, connect `DevHannan-Official/AccessNest`, and keep `main` as the production branch. GitHub's deployment integration may ask you to authorize Vercel for this repository.
+
+If you need to clone the project locally:
 
 ```bash
-git init -b main
-git add .
-git commit -m "Prepare AccessNest for deployment"
-git remote add origin https://github.com/YOUR_ACCOUNT/accessnest.git
-git push -u origin main
+git clone https://github.com/DevHannan-Official/AccessNest.git
+cd AccessNest
 ```
 
-This working folder is not connected to GitHub yet.
-2. In Vercel, choose **Add New → Project**, then import that repository.
-3. Keep the detected **Next.js** framework and default build settings. The included `pnpm-lock.yaml` selects pnpm; `package.json` and `.nvmrc` pin Node.js 24 (Vercel's current default).
-4. Add no environment variables for this version, then deploy. Vercel creates a preview/production URL.
+Keep the detected **Next.js** framework, Node.js 24, and `pnpm install --frozen-lockfile` / `pnpm build` settings. This version does not need environment variables.
 
 Vercel’s [Git deployment flow](https://vercel.com/docs/git) automatically builds and deploys commits after you connect the repository.
 
