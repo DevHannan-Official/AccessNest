@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy | AccessNest",
   description: "What AccessNest processes when you run an accessibility check.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
