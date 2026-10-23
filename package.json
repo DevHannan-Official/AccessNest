@@ -14,6 +14,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "ipaddr.js": "^2.5.0",
     "lucide-react": "^0.468.0",
     "next": "^15.2.0",
