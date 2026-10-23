@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = "https://accessnestai.vercel.app";
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
